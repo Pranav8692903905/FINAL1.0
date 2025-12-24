@@ -8,9 +8,22 @@
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 SINGLE COMMAND TO START EVERYTHING:
+🚀 SINGLE COMMAND (First Time or Every Time):
 
    ./start-all.sh
+
+   ✨ Smart script - auto-installs packages if needed!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 PACKAGES INSTALLATION:
+
+   Pehli baar? Packages install karni hai?
+   
+   → NO WORRIES! ./start-all.sh apne aap kar dega!
+   
+   Ya manually install karna hai?
+   → ./install-dependencies.sh
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -28,20 +41,26 @@
 
 📚 AVAILABLE SCRIPTS:
 
-   ./start-all.sh           - Start all services
+   ./start-all.sh           - Start all (auto-installs)
    ./stop-all.sh            - Stop all services
+   ./install-dependencies.sh - Install packages only
    ./VERIFY.sh              - Check system health
-   ./SETUP_INSTRUCTIONS.sh  - Install dependencies
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-�� DOCUMENTATION:
+📖 DOCUMENTATION:
 
+   FIRST_TIME_SETUP.md      - First time setup guide
    COMMANDS.md              - All commands guide
    QUICK_START.md           - Quick start guide
    README_UPDATED.md        - Full documentation
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✨ THAT'S IT! JUST RUN:  ./start-all.sh
+✨ RECOMMENDATION:
 
+   Har baar bas yahi command:  ./start-all.sh
+   
+   Ye smart hai - packages automatically install kar lega!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

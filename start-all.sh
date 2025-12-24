@@ -15,6 +15,30 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+# Check if dependencies are installed
+echo -e "${YELLOW}Checking dependencies...${NC}"
+
+# Check backend dependencies
+if [ ! -d "/workspaces/FINAL1.0/backend/__pycache__" ] && [ ! -f "/workspaces/FINAL1.0/backend/.dependencies_installed" ]; then
+    echo -e "${YELLOW}⚠ Backend dependencies not found!${NC}"
+    echo -e "${BLUE}Installing backend dependencies...${NC}"
+    cd /workspaces/FINAL1.0/backend
+    pip install -q -r requirements.txt && touch .dependencies_installed
+    echo -e "${GREEN}✓ Backend dependencies installed${NC}"
+fi
+
+# Check frontend dependencies
+if [ ! -d "/workspaces/FINAL1.0/RESUME-BUILDER2-main/node_modules" ]; then
+    echo -e "${YELLOW}⚠ Frontend dependencies not found!${NC}"
+    echo -e "${BLUE}Installing frontend dependencies (this may take a minute)...${NC}"
+    cd /workspaces/FINAL1.0/RESUME-BUILDER2-main
+    npm install --silent
+    echo -e "${GREEN}✓ Frontend dependencies installed${NC}"
+fi
+
+echo -e "${GREEN}✓ Dependencies check complete${NC}"
+echo ""
+
 # Kill any existing processes
 echo -e "${YELLOW}[1/5] Stopping existing services...${NC}"
 pkill -f "python3 main.py" 2>/dev/null || true
